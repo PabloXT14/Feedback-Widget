@@ -11,12 +11,11 @@ interface ScreenshotButtonProps {
 }
 
 
-export function ScreenshotButton({ 
+export function ScreenshotButton({
     screenshot,
-    onScreenshotTook 
+    onScreenshotTook
 }: ScreenshotButtonProps) {
     const [isTakingScreenshot, setIsTakingScreenshot] = useState(false);
-
 
     async function handleTakeScreenshot() {
         setIsTakingScreenshot(true);
@@ -30,7 +29,7 @@ export function ScreenshotButton({
         setIsTakingScreenshot(false);
     }
 
-    if(screenshot) {
+    if (screenshot) {
         return (
             <button
                 type="button"
@@ -42,7 +41,7 @@ export function ScreenshotButton({
                     backgroundSize: 180
                 }}
             >
-                <Trash weight="fill"/>
+                <Trash weight="fill" />
             </button>
         );
     }
@@ -54,7 +53,7 @@ export function ScreenshotButton({
             className="p-2 bg-zinc-800 rounded-md border-transparent hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500"
             onClick={handleTakeScreenshot}
         >
-            { isTakingScreenshot ? <Loading /> : <Camera className="w-6 h-6"/>}
+            {isTakingScreenshot ? <Loading /> : <Camera className="w-6 h-6" />}
         </button>
     );
 }

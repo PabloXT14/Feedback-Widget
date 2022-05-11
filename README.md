@@ -59,8 +59,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ✔ [html2canvas](https://html2canvas.hertzen.com/)
 
-<br/>
-
 ### Back-end
 
 ✔ [Express](https://expressjs.com/pt-br/)
